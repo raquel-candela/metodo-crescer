@@ -1,0 +1,343 @@
+/* VARIÁVEIS DE MARCA */
+:root {
+    --verde-musgo: #2D3E33; 
+    --terracota: #D48E73;   
+    --fundo-creme: #F9F7F2;
+    --texto: #4A4A4A;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--fundo-creme);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--verde-musgo); margin-bottom: 15px; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+
+/* HERO E LOGO */
+.hero { background: white; padding: 20px 0; border-bottom: 1px solid #eee; }
+.main-logo { 
+    width: 320px; max-width: 85%; height: auto; 
+    margin: 0 auto 10px; display: block;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.05));
+}
+.hero h1 { font-size: 2.8rem; letter-spacing: -1px; }
+.hero h1 span { font-style: italic; color: var(--terracota); font-weight: 400; }
+
+/* BLOCO DE VÍDEO */
+.intro-aula {
+    max-width: 850px; margin: 40px auto; padding: 40px;
+    background: #fff; border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(45, 62, 51, 0.08);
+}
+.video-container {
+    position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+    border-radius: 20px; background: #000; margin: 30px 0;
+}
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+/* BOTÕES E CTAS */
+.btn-primary { 
+    display: inline-block; background: var(--verde-musgo); color: white; 
+    padding: 22px 50px; border-radius: 60px; text-decoration: none; font-weight: 600;
+    transition: 0.3s; box-shadow: 0 10px 25px rgba(45, 62, 51, 0.2);
+}
+.btn-primary:hover { background: var(--terracota); transform: translateY(-3px); }
+
+/* SEÇÕES DE CONTEÚDO */
+.manifesto { background: var(--verde-musgo); color: #D1D1D1; padding: 80px 0; }
+.manifesto h2 { color: white; }
+.manifesto blockquote { 
+    font-family: 'Playfair Display'; font-size: 2.2rem; color: var(--terracota); 
+    margin-top: 30px; font-style: italic; display: block;
+}
+
+.ciclo-confiar { width: 100%; max-width: 700px; margin: 40px auto; display: block; }
+
+.modulos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 50px; }
+.modulo-card { 
+    background: white; padding: 30px; border-radius: 20px; text-align: left; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03); border-bottom: 4px solid #eee;
+}
+.modulo-card span { color: var(--terracota); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
+.modulo-card h3 { font-size: 1.2rem; margin-top: 5px; }
+
+/* Experimentação
+/* Estilo da Seção de Experimentação */
+.experimentacao { padding: 40px 0; background-color: #fdfdfd; }
+
+.box-experimento {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    border: 2px dashed var(--terracota); /* Estilo que remete a 'cupom' ou 'teste' */
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    gap: 30px;
+}
+.btn-secundario {
+    /* O comando principal para o texto não 'correr' para a esquerda ao quebrar linha */
+    text-align: center; 
+    
+    /* Garante que o conteúdo (texto) seja tratado como um bloco centralizado */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Ajustes de tamanho */
+    padding: 15px 30px;
+    max-width: 280px; /* Ajuste essa largura para forçar ou evitar a quebra onde desejar */
+    line-height: 1.2; /* Melhora o espaçamento entre as linhas se ele quebrar */
+    
+    /* Seus estilos visuais */
+    border: 2px solid var(--verde-musgo);
+    color: var(--verde-musgo);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.experimento-texto h2 { font-size: 1.6rem; margin-bottom: 10px; }
+.aviso-bonus { color: var(--verde-musgo); font-size: 0.95rem; margin-top: 15px; }
+
+.parcela-avulso { 
+    font-size: 1.1rem; 
+    color: var(--texto); 
+    margin-bottom: 5px; 
+}
+.parcela-avulso strong { 
+    color: var(--verde-musgo); 
+    font-size: 1.8rem; 
+    display: inline-block;
+}
+.vista-avulso { 
+    font-size: 0.85rem; 
+    color: #888; 
+    margin-bottom: 20px; 
+}
+
+
+.valor-avulso { 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    font-weight: 700; 
+    font-size: 0.75rem; 
+    color: var(--terracota); 
+}
+.valor-avulso strong { color: var(--verde-musgo); font-size: 1.8rem; display: block; }
+
+.btn-secundario:hover { background: var(--verde-musgo); color: white; }
+
+/* Ajuste Responsivo */
+@media (max-width: 768px) {
+    .box-experimento { flex-direction: column; text-align: center; }
+}
+
+/* TABELA DE PREÇOS */
+.price-cards { display: flex; gap: 25px; justify-content: center; flex-wrap: wrap; margin-top: 50px; align-items: flex-start; }
+.card { 
+    background: white; padding: 40px; border-radius: 25px; width: 330px; 
+    position: relative; border: 1px solid #efefef; transition: 0.4s;
+}
+.card.highlight { 
+    border: 2px solid var(--terracota); 
+    transform: scale(1.08); /* Destaque para o Combo de R$ 1.497 */
+    box-shadow: 0 25px 60px rgba(212, 142, 115, 0.2); 
+    z-index: 2;
+}
+.badge { 
+    position: absolute; top: -15px; left: 50%; transform: translateX(-50%); 
+    background: var(--terracota); color: white; padding: 6px 20px; 
+    border-radius: 25px; font-size: 0.85rem; font-weight: 600;
+}
+.price span { font-size: 2.4rem; font-weight: 700; color: var(--verde-musgo); }
+/* Estilo Base do Botão Principal */
+.btn-card { 
+    display: block; 
+    background: var(--terracota); 
+    color: white; 
+    padding: 20px; 
+    border-radius: 12px; 
+    text-decoration: none; 
+    margin-top: 25px; 
+    font-weight: 600; 
+    text-align: center;
+    transition: all 0.3s ease; /* Comando essencial para o efeito ser suave e não brusco */
+}
+
+/* Hover do Botão Principal (Terracota) */
+.btn-card:hover {
+    background: #c25e4d; /* Um tom de terracota levemente mais escuro/vivo */
+    transform: translateY(-3px); /* Faz o botão "subir" levemente */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Adiciona uma sombra para dar profundidade */
+}
+
+/* Estilo Base do Botão Secundário */
+.btn-card.secondary { 
+    background: #F4F4F4; 
+    color: var(--verde-musgo); 
+}
+
+/* Hover do Botão Secundário */
+.btn-card.secondary:hover {
+    background: #e0e0e0; /* Escurece levemente o cinza */
+    color: var(--verde-musgo);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Efeito de Clique (Active) para ambos */
+.btn-card:active {
+    transform: translateY(-1px); /* O botão "desce" quando clicado, simulando um botão real */
+}
+
+/* Estilos para ressaltar a Assinatura */
+.title-finance { font-size: 2.2rem; margin-bottom: 5px; }
+.subtitle-finance { color: var(--terracota); font-weight: 600; margin-bottom: 40px; }
+
+.tag-assinatura {
+    background: #eef2f0;
+    color: var(--verde-musgo);
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.info-limite {
+    font-size: 0.85rem;
+    color: #27ae60;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.card h3 { margin-bottom: 5px; }
+.card .desc { font-size: 0.9rem; color: #666; margin-top: 15px; min-height: 50px; }
+
+/* Seção Sobre a Autora - Versão Contraste Escuro */
+.sobre-autora { 
+    background-color: var(--verde-musgo); /* Tom escuro de autoridade */
+    padding: 80px 0; 
+    color: #f4f4f4; /* Texto claro para leitura sobre o verde */
+}
+
+.container-flex { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    gap: 60px; 
+    flex-wrap: wrap; 
+    padding: 0 20px;
+}
+
+.autora-img img { 
+    width: 320px; 
+    border-radius: 30px; 
+    filter: sepia(20%) contrast(110%); /* Filtro que aquece a foto em vez de apenas cinza */
+    box-shadow: 20px 20px 0px var(--terracota); /* Detalhe estético com a cor secundária */
+}
+
+.autora-texto { 
+    flex: 1; 
+    text-align: left; 
+    min-width: 300px; 
+}
+
+.autora-texto h2 { 
+    font-size: 2.2rem; 
+    color: white; /* Título em destaque total */
+    margin-bottom: 20px;
+}
+
+.autora-texto p { 
+    margin-bottom: 18px; 
+    font-size: 1.1rem; 
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+.autora-texto strong {
+    color: var(--terracota); /* Destaca o nome da Raquel com a cor da logo */
+}
+
+.autora-texto em {
+    display: block;
+    margin-top: 25px;
+    border-left: 3px solid var(--terracota);
+    padding-left: 15px;
+    font-size: 1rem;
+    color: #d1d1d1;
+}
+
+/* Ajuste de Responsividade */
+@media (max-width: 768px) {
+    .autora-texto { text-align: center; }
+    .autora-img img { width: 100%; max-width: 280px; box-shadow: 10px 10px 0px var(--terracota); }
+    .container-flex { gap: 30px; }
+}
+
+.faq { background: #fff; padding: 60px 0; }
+.faq-item { max-width: 800px; margin: 10px auto; text-align: left; border-bottom: 1px solid #eee; }
+summary { padding: 20px; font-weight: 600; cursor: pointer; color: var(--verde-musgo); list-style: none; }
+summary::before { content: "+ "; color: var(--terracota); }
+details[open] summary::before { content: "- "; }
+details p { padding: 0 20px 20px; color: var(--texto); font-size: 0.95rem; }
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .card.highlight { transform: none; margin: 20px 0; }
+    .price-cards { padding: 0 10px; }
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.05);
+    background-color: #20ba5a;
+}
+
+.whatsapp-float img {
+    width: 25px;
+    height: 25px;
+}
+
+/* No celular, para não ocupar muito espaço, podemos esconder o texto e deixar só o ícone */
+@media (max-width: 768px) {
+    .whatsapp-float span {
+        display: none;
+    }
+    .whatsapp-float {
+        padding: 15px;
+        border-radius: 50%;
+        bottom: 15px;
+        right: 15px;
+    }
+}
